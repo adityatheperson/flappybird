@@ -85,9 +85,10 @@ while True:
             pygame.quit()
             sys.exit()
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE or pygame.K_UP:
-                bird_movement = 0
-                bird_movement -= 6
+            if game_state == GameState.ACTIVE:
+                if event.key == pygame.K_SPACE or pygame.K_UP:
+                    bird_movement = 0
+                    bird_movement -= 6
         if event.type == SPAWNPIPE:
             pipe_list.extend(create_pipe())
 
