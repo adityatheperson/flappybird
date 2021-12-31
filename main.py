@@ -195,6 +195,9 @@ def new_game():
             end_game_surface = game_font.render("Press R to Restart", True, (255, 255, 255))
             end_game_rect = end_game_surface.get_rect(center=(144, 50))
             screen.blit(end_game_surface, end_game_rect)
+            game_over_surface = final_score_font.render("GAME OVER!", True, (255, 0, 0))
+            game_over_rect = game_over_surface.get_rect(center=(144, 350))
+            screen.blit(game_over_surface, game_over_rect)
         if game_state == GameState.NOTSTARTED:
             gravity = 0
             screen.blit(bird_surface, bird_rect)
