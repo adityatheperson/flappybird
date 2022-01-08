@@ -74,16 +74,16 @@ pygame.init()
 screen = pygame.display.set_mode((288, 512))
 pygame.display.set_caption('Flappy Bird')
 clock = pygame.time.Clock()
-game_font = pygame.font.Font('C:/Users/adith/Downloads/04B_19.TTF', 20)
-final_score_font = pygame.font.Font('C:/Users/adith/Downloads/04B_19.TTF', 50)
+game_font = pygame.font.Font('./assets/04B_19.TTF', 20)
+final_score_font = pygame.font.Font('./assets/04B_19.TTF', 50)
 
 # Game Variables
-bg_surface = pygame.image.load("C:/Users/adith/Downloads/background-day.png").convert()
-floor_surface = pygame.image.load("C:/Users/adith/Downloads/base.png").convert()
-floor_surface2 = pygame.image.load("C:/Users/adith/Downloads/base.png").convert()
-bird_midflap = pygame.image.load("C:/Users/adith/Downloads/bluebird-midflap.png").convert_alpha()
-bird_upflap = pygame.image.load("C:/Users/adith/Downloads/6wbluebird-upflap.png").convert_alpha()
-bird_downflap = pygame.image.load("C:/Users/adith/Downloads/bluebird-downflap.png").convert_alpha()
+bg_surface = pygame.image.load("./assets/background-day.png").convert()
+floor_surface = pygame.image.load("./assets/base.png").convert()
+floor_surface2 = pygame.image.load("./assets/base.png").convert()
+bird_midflap = pygame.image.load("./assets/bluebird-midflap.png").convert_alpha()
+bird_upflap = pygame.image.load("./assets/bluebird-upflap.png").convert_alpha()
+bird_downflap = pygame.image.load("./assets/bluebird-downflap.png").convert_alpha()
 bird_frames = [bird_downflap, bird_midflap, bird_upflap]
 gravity = 0
 bird_movement = 0
@@ -99,7 +99,7 @@ bird_rect = bird_surface.get_rect(center=(50, 256))
 BIRDFLAP = pygame.USEREVENT + 1
 pygame.time.set_timer(BIRDFLAP, 200)
 
-pipe_surface = pygame.image.load("C:/Users/adith/Downloads/pipe-green.png")
+pipe_surface = pygame.image.load("./assets/pipe-green.png")
 flip_bird = pygame.transform.flip(bird_midflap, False, True)
 
 SPAWNPIPE = pygame.USEREVENT
